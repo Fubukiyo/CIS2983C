@@ -1,0 +1,11 @@
+D:\School\SADCap\course\Cap\Cap\bin\Debug\Cap.exe.config
+D:\School\SADCap\course\Cap\Cap\bin\Debug\Cap.exe
+D:\School\SADCap\course\Cap\Cap\bin\Debug\Cap.pdb
+D:\School\SADCap\course\Cap\Cap\obj\Debug\Cap.csprojResolveAssemblyReference.cache
+D:\School\SADCap\course\Cap\Cap\obj\Debug\Cap.Properties.Resources.resources
+D:\School\SADCap\course\Cap\Cap\obj\Debug\Cap.csproj.GenerateResource.Cache
+D:\School\SADCap\course\Cap\Cap\obj\Debug\Cap.exe
+D:\School\SADCap\course\Cap\Cap\obj\Debug\Cap.pdb
+D:\School\SADCap\course\Cap\Cap\obj\Debug\Cap.Dashboard.resources
+D:\School\SADCap\course\Cap\Cap\obj\Debug\Cap.Search.resources
+D:\School\SADCap\course\Cap\Cap\obj\Debug\Cap.Add.resources
