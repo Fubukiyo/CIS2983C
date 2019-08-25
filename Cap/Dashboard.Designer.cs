@@ -29,77 +29,111 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.redDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.red_DBDataSet = new Cap.Red_DBDataSet();
-            this.searchStudents = new System.Windows.Forms.Button();
             this.addFormButton = new System.Windows.Forms.Button();
-            this.addStudentLabel = new System.Windows.Forms.Label();
-            this.searchStudentLabel = new System.Windows.Forms.Label();
+            this.loginButton = new System.Windows.Forms.Button();
+            this.passwordBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.usernameBox = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.usernameTextBox = new System.Windows.Forms.TextBox();
+            this.redDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.helpButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.redDBDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.red_DBDataSet)).BeginInit();
             this.SuspendLayout();
-            // 
-            // redDBDataSetBindingSource
-            // 
-            this.redDBDataSetBindingSource.DataSource = this.red_DBDataSet;
-            this.redDBDataSetBindingSource.Position = 0;
-            // 
-            // red_DBDataSet
-            // 
-            this.red_DBDataSet.DataSetName = "Red_DBDataSet";
-            this.red_DBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // searchStudents
-            // 
-            this.searchStudents.Location = new System.Drawing.Point(217, 138);
-            this.searchStudents.Name = "searchStudents";
-            this.searchStudents.Size = new System.Drawing.Size(75, 23);
-            this.searchStudents.TabIndex = 24;
-            this.searchStudents.Text = "Search";
-            this.searchStudents.UseVisualStyleBackColor = true;
-            this.searchStudents.Click += new System.EventHandler(this.searchStudents_Click);
             // 
             // addFormButton
             // 
-            this.addFormButton.Location = new System.Drawing.Point(60, 138);
+            this.addFormButton.Location = new System.Drawing.Point(150, 61);
             this.addFormButton.Name = "addFormButton";
             this.addFormButton.Size = new System.Drawing.Size(75, 23);
-            this.addFormButton.TabIndex = 25;
+            this.addFormButton.TabIndex = 4;
             this.addFormButton.Text = "Register";
             this.addFormButton.UseVisualStyleBackColor = true;
             this.addFormButton.Click += new System.EventHandler(this.addFormButton_Click);
             // 
-            // addStudentLabel
+            // loginButton
             // 
-            this.addStudentLabel.AutoSize = true;
-            this.addStudentLabel.Location = new System.Drawing.Point(60, 119);
-            this.addStudentLabel.Name = "addStudentLabel";
-            this.addStudentLabel.Size = new System.Drawing.Size(86, 13);
-            this.addStudentLabel.TabIndex = 26;
-            this.addStudentLabel.Text = "Register Student";
+            this.loginButton.Location = new System.Drawing.Point(69, 61);
+            this.loginButton.Name = "loginButton";
+            this.loginButton.Size = new System.Drawing.Size(75, 23);
+            this.loginButton.TabIndex = 3;
+            this.loginButton.Text = "Log In";
+            this.loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
-            // searchStudentLabel
+            // passwordBox
             // 
-            this.searchStudentLabel.AutoSize = true;
-            this.searchStudentLabel.Location = new System.Drawing.Point(214, 119);
-            this.searchStudentLabel.Name = "searchStudentLabel";
-            this.searchStudentLabel.Size = new System.Drawing.Size(81, 13);
-            this.searchStudentLabel.TabIndex = 27;
-            this.searchStudentLabel.Text = "Search Student";
+            this.passwordBox.Location = new System.Drawing.Point(69, 35);
+            this.passwordBox.Name = "passwordBox";
+            this.passwordBox.Size = new System.Drawing.Size(156, 20);
+            this.passwordBox.TabIndex = 2;
+            this.passwordBox.UseSystemPasswordChar = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(10, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 13);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Username";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(10, 38);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 13);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "Password";
+            // 
+            // usernameBox
+            // 
+            this.usernameBox.Location = new System.Drawing.Point(67, 11);
+            this.usernameBox.Name = "usernameBox";
+            this.usernameBox.Size = new System.Drawing.Size(156, 20);
+            this.usernameBox.TabIndex = 29;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(67, 37);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(156, 20);
+            this.textBox2.TabIndex = 30;
+            // 
+            // usernameTextBox
+            // 
+            this.usernameTextBox.Location = new System.Drawing.Point(69, 10);
+            this.usernameTextBox.Name = "usernameTextBox";
+            this.usernameTextBox.Size = new System.Drawing.Size(156, 20);
+            this.usernameTextBox.TabIndex = 1;
+            // 
+            // helpButton
+            // 
+            this.helpButton.Location = new System.Drawing.Point(12, 61);
+            this.helpButton.Name = "helpButton";
+            this.helpButton.Size = new System.Drawing.Size(24, 24);
+            this.helpButton.TabIndex = 33;
+            this.helpButton.Text = "?";
+            this.helpButton.UseVisualStyleBackColor = true;
+            this.helpButton.Click += new System.EventHandler(this.helpButton_Click);
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(355, 197);
-            this.Controls.Add(this.searchStudentLabel);
-            this.Controls.Add(this.addStudentLabel);
+            this.ClientSize = new System.Drawing.Size(239, 96);
+            this.Controls.Add(this.helpButton);
+            this.Controls.Add(this.usernameTextBox);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.passwordBox);
+            this.Controls.Add(this.loginButton);
             this.Controls.Add(this.addFormButton);
-            this.Controls.Add(this.searchStudents);
             this.Name = "Dashboard";
             this.Text = "Dashboard";
             ((System.ComponentModel.ISupportInitialize)(this.redDBDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.red_DBDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -107,11 +141,15 @@
 
         #endregion
         private System.Windows.Forms.BindingSource redDBDataSetBindingSource;
-        private Red_DBDataSet red_DBDataSet;
-        private System.Windows.Forms.Button searchStudents;
         private System.Windows.Forms.Button addFormButton;
-        private System.Windows.Forms.Label addStudentLabel;
-        private System.Windows.Forms.Label searchStudentLabel;
+        private System.Windows.Forms.Button loginButton;
+        private System.Windows.Forms.TextBox passwordBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox usernameBox;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox usernameTextBox;
+        private System.Windows.Forms.Button helpButton;
     }
 }
 

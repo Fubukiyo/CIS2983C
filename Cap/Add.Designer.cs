@@ -57,7 +57,7 @@
             // 
             // addButton
             // 
-            this.addButton.Location = new System.Drawing.Point(136, 224);
+            this.addButton.Location = new System.Drawing.Point(136, 251);
             this.addButton.Name = "addButton";
             this.addButton.Size = new System.Drawing.Size(75, 23);
             this.addButton.TabIndex = 16;
@@ -148,7 +148,7 @@
             // itField
             // 
             this.itField.AutoSize = true;
-            this.itField.Location = new System.Drawing.Point(12, 183);
+            this.itField.Location = new System.Drawing.Point(12, 210);
             this.itField.Name = "itField";
             this.itField.Size = new System.Drawing.Size(136, 17);
             this.itField.TabIndex = 23;
@@ -159,7 +159,7 @@
             // medicalField
             // 
             this.medicalField.AutoSize = true;
-            this.medicalField.Location = new System.Drawing.Point(12, 206);
+            this.medicalField.Location = new System.Drawing.Point(12, 233);
             this.medicalField.Name = "medicalField";
             this.medicalField.Size = new System.Drawing.Size(62, 17);
             this.medicalField.TabIndex = 24;
@@ -170,7 +170,7 @@
             // businessField
             // 
             this.businessField.AutoSize = true;
-            this.businessField.Location = new System.Drawing.Point(12, 230);
+            this.businessField.Location = new System.Drawing.Point(12, 257);
             this.businessField.Name = "businessField";
             this.businessField.Size = new System.Drawing.Size(67, 17);
             this.businessField.TabIndex = 25;
@@ -181,7 +181,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 167);
+            this.label1.Location = new System.Drawing.Point(12, 194);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(240, 13);
             this.label1.TabIndex = 26;
@@ -191,7 +191,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(255, 261);
+            this.ClientSize = new System.Drawing.Size(255, 286);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.businessField);
             this.Controls.Add(this.medicalField);

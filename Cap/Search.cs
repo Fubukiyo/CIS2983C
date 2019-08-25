@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data.SqlClient;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Cap
@@ -22,63 +15,103 @@ namespace Cap
         {
             if (fNameRB.Checked)
             {
-                var select = "SELECT * FROM Student WHERE Firstname = '" + searchBox.Text + "'";
+                SqlCommand com;
                 var c = new SqlConnection("Data Source = reddb.database.windows.net; Initial Catalog = Red_DB; Persist Security Info = True; User ID = red; Password = Passw0rd");
-                var dataAdapter = new SqlDataAdapter(select, c);
-
-                var commandBuilder = new SqlCommandBuilder(dataAdapter);
-                var ds = new DataSet();
-                dataAdapter.Fill(ds);
-                dataGridView1.ReadOnly = true;
-                dataGridView1.DataSource = ds.Tables[0];
+                c.Open();
+                var select = "SELECT * FROM Student WHERE Firstname = '" + searchBox.Text + "'";
+                com = new SqlCommand(select, c);
+                SqlDataReader reader = com.ExecuteReader();
+                if (reader.Read())
+                {
+                    fNameShow.Text = reader["FirstName"].ToString();
+                    lNameShow.Text = reader["LastName"].ToString();
+                    pNumShow.Text = reader["PhoneNumber"].ToString();
+                    emailShow.Text = reader["Email"].ToString();
+                    addressShow.Text = reader["PhysicalAddress"].ToString();
+                    reader.Close();
+                    c.Close();
+                }
             }
             else if (lNameRB.Checked)
             {
-                var select = "SELECT * FROM Student WHERE LastName = '" + searchBox.Text + "'";
-                var c = new SqlConnection("Data Source = reddb.database.windows.net; Initial Catalog = Red_DB; Persist Security Info = True; User ID = red; Password = Passw0rd");
-                var dataAdapter = new SqlDataAdapter(select, c);
 
-                var commandBuilder = new SqlCommandBuilder(dataAdapter);
-                var ds = new DataSet();
-                dataAdapter.Fill(ds);
-                dataGridView1.ReadOnly = true;
-                dataGridView1.DataSource = ds.Tables[0];
+                SqlCommand com;
+                var c = new SqlConnection("Data Source = reddb.database.windows.net; Initial Catalog = Red_DB; Persist Security Info = True; User ID = red; Password = Passw0rd");
+                c.Open();
+                var select = "SELECT * FROM Student WHERE LastName = '" + searchBox.Text + "'";
+                com = new SqlCommand(select, c);
+                SqlDataReader reader = com.ExecuteReader();
+                if (reader.Read())
+                {
+                    fNameShow.Text = reader["FirstName"].ToString();
+                    lNameShow.Text = reader["LastName"].ToString();
+                    pNumShow.Text = reader["PhoneNumber"].ToString();
+                    emailShow.Text = reader["Email"].ToString();
+                    addressShow.Text = reader["PhysicalAddress"].ToString();
+
+                    reader.Close();
+                    c.Close();
+                }
             }
             else if (emailRB.Checked)
             {
-                var select = "SELECT * FROM Student WHERE Email = '" + searchBox.Text + "'";
+                SqlCommand com;
                 var c = new SqlConnection("Data Source = reddb.database.windows.net; Initial Catalog = Red_DB; Persist Security Info = True; User ID = red; Password = Passw0rd");
-                var dataAdapter = new SqlDataAdapter(select, c);
+                c.Open();
+                var select = "SELECT * FROM Student WHERE EmailAddress = '" + searchBox.Text + "'";
+                com = new SqlCommand(select, c);
+                SqlDataReader reader = com.ExecuteReader();
+                if (reader.Read())
+                {
+                    fNameShow.Text = reader["FirstName"].ToString();
+                    lNameShow.Text = reader["LastName"].ToString();
+                    pNumShow.Text = reader["PhoneNumber"].ToString();
+                    emailShow.Text = reader["Email"].ToString();
+                    addressShow.Text = reader["PhysicalAddress"].ToString();
 
-                var commandBuilder = new SqlCommandBuilder(dataAdapter);
-                var ds = new DataSet();
-                dataAdapter.Fill(ds);
-                dataGridView1.ReadOnly = true;
-                dataGridView1.DataSource = ds.Tables[0];
+                    reader.Close();
+                    c.Close();
+                }
             }
             else if (pNumRB.Checked)
             {
-                var select = "SELECT * FROM Student WHERE PhoneNumber = '" + searchBox.Text + "'";
+                SqlCommand com;
                 var c = new SqlConnection("Data Source = reddb.database.windows.net; Initial Catalog = Red_DB; Persist Security Info = True; User ID = red; Password = Passw0rd");
-                var dataAdapter = new SqlDataAdapter(select, c);
+                c.Open();
+                var select = "SELECT * FROM Student WHERE PhoneNumber = '" + searchBox.Text + "'";
+                com = new SqlCommand(select, c);
+                SqlDataReader reader = com.ExecuteReader();
+                if (reader.Read())
+                {
+                    fNameShow.Text = reader["FirstName"].ToString();
+                    lNameShow.Text = reader["LastName"].ToString();
+                    pNumShow.Text = reader["PhoneNumber"].ToString();
+                    emailShow.Text = reader["Email"].ToString();
+                    addressShow.Text = reader["PhysicalAddress"].ToString();
 
-                var commandBuilder = new SqlCommandBuilder(dataAdapter);
-                var ds = new DataSet();
-                dataAdapter.Fill(ds);
-                dataGridView1.ReadOnly = true;
-                dataGridView1.DataSource = ds.Tables[0];
+                    reader.Close();
+                    c.Close();
+                }
             }
             else if (pAddressRB.Checked)
             {
-                var select = "SELECT * FROM Student WHERE PhysicalAddress = '" + searchBox.Text + "'";
+                SqlCommand com;
                 var c = new SqlConnection("Data Source = reddb.database.windows.net; Initial Catalog = Red_DB; Persist Security Info = True; User ID = red; Password = Passw0rd");
-                var dataAdapter = new SqlDataAdapter(select, c);
+                c.Open();
+                var select = "SELECT * FROM Student WHERE PhysicalAddress = '" + searchBox.Text + "'";
+                com = new SqlCommand(select, c);
+                SqlDataReader reader = com.ExecuteReader();
+                if (reader.Read())
+                {
+                    fNameShow.Text = reader["FirstName"].ToString();
+                    lNameShow.Text = reader["LastName"].ToString();
+                    pNumShow.Text = reader["PhoneNumber"].ToString();
+                    emailShow.Text = reader["Email"].ToString();
+                    addressShow.Text = reader["PhysicalAddress"].ToString();
 
-                var commandBuilder = new SqlCommandBuilder(dataAdapter);
-                var ds = new DataSet();
-                dataAdapter.Fill(ds);
-                dataGridView1.ReadOnly = true;
-                dataGridView1.DataSource = ds.Tables[0];
+                    reader.Close();
+                    c.Close();
+                }
             }
             else
             {

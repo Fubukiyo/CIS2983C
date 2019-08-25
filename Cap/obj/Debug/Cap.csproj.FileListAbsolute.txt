@@ -9,3 +9,4 @@ D:\School\SADCap\course\Cap\Cap\obj\Debug\Cap.pdb
 D:\School\SADCap\course\Cap\Cap\obj\Debug\Cap.Dashboard.resources
 D:\School\SADCap\course\Cap\Cap\obj\Debug\Cap.Search.resources
 D:\School\SADCap\course\Cap\Cap\obj\Debug\Cap.Add.resources
+D:\School\SADCap\course\Cap\Cap\obj\Debug\Cap.UserDash.resources
