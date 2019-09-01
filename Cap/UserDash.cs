@@ -6,6 +6,7 @@ namespace Cap
 {
     public partial class UserDash : Form
     {
+        private int totalClasses;
         public UserDash(string username)
         {
             InitializeComponent();
@@ -17,6 +18,7 @@ namespace Cap
             SqlDataReader reader = com.ExecuteReader();
             if (reader.Read())
             {
+                studentIDBox.Text = reader["studentID"].ToString();
                 fNameShow.Text = reader["FirstName"].ToString();
                 lNameShow.Text = reader["LastName"].ToString();
                 pNumShow.Text = reader["PhoneNumber"].ToString();
@@ -28,9 +30,38 @@ namespace Cap
             }
         }
 
-        private void UserDash_Load(object sender, EventArgs e)
+        public void UserDash_Load(object sender, EventArgs e)
         {
 
+            SqlCommand com;
+            int totalClasses;
+            int maxClasses = 3;
+            var c = new SqlConnection("Data Source = reddb.database.windows.net; Initial Catalog = Red_DB; Persist Security Info = True; User ID = red; Password = Passw0rd");
+            c.Open();
+            var select = "SELECT * FROM StudentRecords WHERE StudentID = '" + studentIDBox.Text + "'";
+            com = new SqlCommand(select, c);
+            SqlDataReader reader = com.ExecuteReader();
+            reader.Read();
+            totalClasses = reader.GetInt32(1);
+            apologyText.Visible = false;
+            registerMoreClassesLabel.Visible = false;
+            if (totalClasses >= maxClasses)
+            {
+                careerCourse1.Visible = false;
+                careerCourse2.Visible = false;
+                generalCourse1.Visible = false;
+                generalCourse2.Visible = false;
+                registerClassLabel.Visible = false;
+                TestButton.Visible = false;
+                apologyText.Visible = true;
+
+            }
+            else
+            {
+                registerMoreClassesLabel.Visible = true;
+            }
+            reader.Close();
+            c.Close();
         }
 
         private void searchButton_Click(object sender, EventArgs e)
@@ -40,50 +71,35 @@ namespace Cap
             SearchWindow.Show();
         }
 
-        private void classesPage_Click(object sender, EventArgs e)
+        private void TestButton_Click(object sender, EventArgs e)
         {
-
-            InitializeComponent();
-            SqlCommand com;
-            int totalClasses;
-            var c = new SqlConnection("Data Source = reddb.database.windows.net; Initial Catalog = Red_DB; Persist Security Info = True; User ID = red; Password = Passw0rd");
-            c.Open();
-            var select = "SELECT * FROM StudentRecords WHERE StudentID = '" + 1 + "'";
-            com = new SqlCommand(select, c);
-            SqlDataReader reader = com.ExecuteReader();
-            reader.Read();
-            totalClasses = reader.GetInt32(1);
-            MessageBox.Show("" + totalClasses + "");
-            if (totalClasses > 3)
+            if (generalCourse1.Checked)
             {
-                MessageBox.Show("Sorry, you're already enrolled in the maximum amount of classes!");
+                totalClasses++;
+                SqlCommand com;
+                var c = new SqlConnection("Data Source = reddb.database.windows.net; Initial Catalog = Red_DB; Persist Security Info = True; User ID = red; Password = Passw0rd");
+                c.Open();
+                var select = "SELECT * FROM StudentRecords WHERE StudentID = '" + studentIDBox.Text + "'";
+                com = new SqlCommand(select, c);
+                MessageBox.Show("You're now registered for " + generalCourse1.Text + "!");
+
             }
-            reader.Close();
-            c.Close();
+            if (generalCourse2.Checked)
+            {
+                MessageBox.Show("You're now registered for "+ generalCourse2.Text + "!");
+
+            }
+            if(careerCourse1.Checked)
+            {
+                MessageBox.Show("You're now registered for "+ careerCourse1.Text + "!");
+
+            }
+            if (careerCourse2.Checked)
+            {
+                MessageBox.Show("You're now registered for " + careerCourse2.Text + "!");
+
+            }
         }
-
-        private void refreshButton_Click(object sender, EventArgs e)
-        {
-
-            SqlCommand com;
-            int totalClasses;
-            var c = new SqlConnection("Data Source = reddb.database.windows.net; Initial Catalog = Red_DB; Persist Security Info = True; User ID = red; Password = Passw0rd");
-            c.Open();
-            var select = "SELECT * FROM StudentRecords WHERE StudentID = '" + 1 + "'";
-            com = new SqlCommand(select, c);
-            SqlDataReader reader = com.ExecuteReader();
-            reader.Read();
-            totalClasses = reader.GetInt32(1);
-            if (totalClasses >= 3)
-            {
-                MessageBox.Show("You've reached the maximum amount of classes at one time.\nYour total classes are: " + totalClasses);
-            }
-            else
-            {
-
-            }
-            reader.Close();
-            c.Close();
-        }
+        public int GSTC { get; set; }
     }
 }

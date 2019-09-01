@@ -117,6 +117,7 @@
             this.helpButton.TabIndex = 33;
             this.helpButton.Text = "?";
             this.helpButton.UseVisualStyleBackColor = true;
+            this.helpButton.Visible = false;
             this.helpButton.Click += new System.EventHandler(this.helpButton_Click);
             // 
             // Dashboard

@@ -40,7 +40,17 @@
             this.fieldBoxShow = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.searchButton = new System.Windows.Forms.Button();
-            this.refreshButton = new System.Windows.Forms.Button();
+            this.studentIDLabel = new System.Windows.Forms.Label();
+            this.studentIDBox = new System.Windows.Forms.TextBox();
+            this.apologyText = new System.Windows.Forms.Label();
+            this.TestButton = new System.Windows.Forms.Button();
+            this.generalCourse1 = new System.Windows.Forms.RadioButton();
+            this.generalCourse2 = new System.Windows.Forms.RadioButton();
+            this.careerCourse1 = new System.Windows.Forms.RadioButton();
+            this.careerCourse2 = new System.Windows.Forms.RadioButton();
+            this.label6 = new System.Windows.Forms.Label();
+            this.registerClassLabel = new System.Windows.Forms.Label();
+            this.registerMoreClassesLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // fNameShow
@@ -144,7 +154,7 @@
             // 
             // searchButton
             // 
-            this.searchButton.Location = new System.Drawing.Point(540, 12);
+            this.searchButton.Location = new System.Drawing.Point(527, 34);
             this.searchButton.Name = "searchButton";
             this.searchButton.Size = new System.Drawing.Size(75, 23);
             this.searchButton.TabIndex = 11;
@@ -152,22 +162,132 @@
             this.searchButton.UseVisualStyleBackColor = true;
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
-            // refreshButton
+            // studentIDLabel
             // 
-            this.refreshButton.Location = new System.Drawing.Point(357, 118);
-            this.refreshButton.Name = "refreshButton";
-            this.refreshButton.Size = new System.Drawing.Size(75, 23);
-            this.refreshButton.TabIndex = 13;
-            this.refreshButton.Text = "Refresh";
-            this.refreshButton.UseVisualStyleBackColor = true;
-            this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
+            this.studentIDLabel.AutoSize = true;
+            this.studentIDLabel.Location = new System.Drawing.Point(298, 23);
+            this.studentIDLabel.Name = "studentIDLabel";
+            this.studentIDLabel.Size = new System.Drawing.Size(61, 13);
+            this.studentIDLabel.TabIndex = 14;
+            this.studentIDLabel.Text = "Student ID:";
+            // 
+            // studentIDBox
+            // 
+            this.studentIDBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.studentIDBox.Location = new System.Drawing.Point(365, 23);
+            this.studentIDBox.Name = "studentIDBox";
+            this.studentIDBox.ReadOnly = true;
+            this.studentIDBox.Size = new System.Drawing.Size(100, 13);
+            this.studentIDBox.TabIndex = 15;
+            // 
+            // apologyText
+            // 
+            this.apologyText.AutoSize = true;
+            this.apologyText.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.apologyText.Location = new System.Drawing.Point(241, 114);
+            this.apologyText.Name = "apologyText";
+            this.apologyText.Size = new System.Drawing.Size(344, 17);
+            this.apologyText.TabIndex = 26;
+            this.apologyText.Text = "Sorry, you can\'t apply for any more classes right now!";
+            // 
+            // TestButton
+            // 
+            this.TestButton.Location = new System.Drawing.Point(422, 128);
+            this.TestButton.Name = "TestButton";
+            this.TestButton.Size = new System.Drawing.Size(75, 23);
+            this.TestButton.TabIndex = 27;
+            this.TestButton.Text = "Register";
+            this.TestButton.UseVisualStyleBackColor = true;
+            this.TestButton.Click += new System.EventHandler(this.TestButton_Click);
+            // 
+            // generalCourse1
+            // 
+            this.generalCourse1.AutoSize = true;
+            this.generalCourse1.Location = new System.Drawing.Point(308, 88);
+            this.generalCourse1.Name = "generalCourse1";
+            this.generalCourse1.Size = new System.Drawing.Size(107, 17);
+            this.generalCourse1.TabIndex = 28;
+            this.generalCourse1.Tag = "";
+            this.generalCourse1.Text = "General Course 1";
+            this.generalCourse1.UseVisualStyleBackColor = true;
+            // 
+            // generalCourse2
+            // 
+            this.generalCourse2.AutoSize = true;
+            this.generalCourse2.Location = new System.Drawing.Point(308, 111);
+            this.generalCourse2.Name = "generalCourse2";
+            this.generalCourse2.Size = new System.Drawing.Size(107, 17);
+            this.generalCourse2.TabIndex = 29;
+            this.generalCourse2.Tag = "";
+            this.generalCourse2.Text = "General Course 2";
+            this.generalCourse2.UseVisualStyleBackColor = true;
+            // 
+            // careerCourse1
+            // 
+            this.careerCourse1.AutoSize = true;
+            this.careerCourse1.Location = new System.Drawing.Point(308, 134);
+            this.careerCourse1.Name = "careerCourse1";
+            this.careerCourse1.Size = new System.Drawing.Size(101, 17);
+            this.careerCourse1.TabIndex = 30;
+            this.careerCourse1.Tag = "";
+            this.careerCourse1.Text = "Career Course 1";
+            this.careerCourse1.UseVisualStyleBackColor = true;
+            // 
+            // careerCourse2
+            // 
+            this.careerCourse2.AutoSize = true;
+            this.careerCourse2.Location = new System.Drawing.Point(308, 157);
+            this.careerCourse2.Name = "careerCourse2";
+            this.careerCourse2.Size = new System.Drawing.Size(101, 17);
+            this.careerCourse2.TabIndex = 31;
+            this.careerCourse2.Tag = "";
+            this.careerCourse2.Text = "Career Course 2";
+            this.careerCourse2.UseVisualStyleBackColor = true;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(521, 18);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(96, 13);
+            this.label6.TabIndex = 32;
+            this.label6.Text = "Search for Student";
+            // 
+            // registerClassLabel
+            // 
+            this.registerClassLabel.AutoSize = true;
+            this.registerClassLabel.Location = new System.Drawing.Point(305, 72);
+            this.registerClassLabel.Name = "registerClassLabel";
+            this.registerClassLabel.Size = new System.Drawing.Size(102, 13);
+            this.registerClassLabel.TabIndex = 33;
+            this.registerClassLabel.Text = "Register for classes:";
+            // 
+            // registerMoreClassesLabel
+            // 
+            this.registerMoreClassesLabel.AutoSize = true;
+            this.registerMoreClassesLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.registerMoreClassesLabel.Location = new System.Drawing.Point(251, 54);
+            this.registerMoreClassesLabel.Name = "registerMoreClassesLabel";
+            this.registerMoreClassesLabel.Size = new System.Drawing.Size(223, 17);
+            this.registerMoreClassesLabel.TabIndex = 34;
+            this.registerMoreClassesLabel.Text = "You can register for more classes!";
             // 
             // UserDash
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(629, 406);
-            this.Controls.Add(this.refreshButton);
+            this.ClientSize = new System.Drawing.Size(629, 211);
+            this.Controls.Add(this.registerMoreClassesLabel);
+            this.Controls.Add(this.registerClassLabel);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.careerCourse2);
+            this.Controls.Add(this.careerCourse1);
+            this.Controls.Add(this.generalCourse2);
+            this.Controls.Add(this.generalCourse1);
+            this.Controls.Add(this.TestButton);
+            this.Controls.Add(this.apologyText);
+            this.Controls.Add(this.studentIDBox);
+            this.Controls.Add(this.studentIDLabel);
             this.Controls.Add(this.searchButton);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.fieldBoxShow);
@@ -180,8 +300,8 @@
             this.Controls.Add(this.emailShow);
             this.Controls.Add(this.lNameShow);
             this.Controls.Add(this.fNameShow);
-            this.MaximumSize = new System.Drawing.Size(645, 445);
-            this.MinimumSize = new System.Drawing.Size(645, 445);
+            this.MaximumSize = new System.Drawing.Size(645, 250);
+            this.MinimumSize = new System.Drawing.Size(645, 250);
             this.Name = "UserDash";
             this.Text = "UserDash";
             this.Load += new System.EventHandler(this.UserDash_Load);
@@ -204,6 +324,16 @@
         private System.Windows.Forms.TextBox fieldBoxShow;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button searchButton;
-        private System.Windows.Forms.Button refreshButton;
+        private System.Windows.Forms.Label studentIDLabel;
+        private System.Windows.Forms.TextBox studentIDBox;
+        private System.Windows.Forms.Label apologyText;
+        private System.Windows.Forms.Button TestButton;
+        private System.Windows.Forms.RadioButton generalCourse1;
+        private System.Windows.Forms.RadioButton generalCourse2;
+        private System.Windows.Forms.RadioButton careerCourse1;
+        private System.Windows.Forms.RadioButton careerCourse2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label registerClassLabel;
+        private System.Windows.Forms.Label registerMoreClassesLabel;
     }
 }
